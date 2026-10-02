@@ -3,6 +3,21 @@ layout: page.njk
 title: Bio
 permalink: /bio/
 ---
+<div class="bio-gallery">
+  <img src="/assets/images/bio/headshot-1.jpg" alt="Blake Beckemeyer headshot" loading="lazy">
+  <img src="/assets/images/bio/indy-ghost-light-0152.jpg" alt="Blake Beckemeyer performing" loading="lazy">
+  <img src="/assets/images/bio/indy-ghost-light-0009-2.jpg" alt="Blake Beckemeyer performing" loading="lazy">
+  <img src="/assets/images/bio/indy-ghost-light-0373.jpg" alt="Blake Beckemeyer performing" loading="lazy">
+  <img src="/assets/images/bio/indy-ghost-light-0166-2.jpg" alt="Blake Beckemeyer performing" loading="lazy">
+  <img src="/assets/images/bio/indy-ghost-light-0012.jpg" alt="Blake Beckemeyer performing" loading="lazy">
+</div>
+
+<blockquote class="pull-quote">
+  “Beckemeyer returned shortly thereafter to display the advantage of presenting soloists of
+  different expressive capabilities as he sang [Thou shalt break them.]”
+  <cite>— Jay Harvey, former writer at <em>Indianapolis Star</em></cite>
+</blockquote>
+
 Tenor **Blake Beckemeyer** thrives on exciting, small-ensemble performances working on
 historical and text-driven interpretations of Baroque, Classical, and modern music. He was
 the Virginia Best Adams Tenor for the Carmel Bach Festival for 2024. He specializes in the

@@ -168,4 +168,23 @@ await processCollection("engagements", "/engagements-beckemeyer");
 await processCollection("news", "/beckemeyer-news");
 await processCollection("platform", "/em-power-ing-the-platform");
 
+// The bio page's photo gallery is rendered client-side via a Squarespace
+// "gallery block" (not present in the JSON API's mainContent), so its
+// images were found separately via a headless browser and are downloaded
+// here by direct URL instead of by re-crawling the page.
+const BIO_GALLERY = [
+  { name: "headshot-1", url: "https://images.squarespace-cdn.com/content/v1/57b4970fcd0f68856d4cee0a/1751941607051-214JICL6OVTX58Y0XGXN/Headshot+%281%29.jpg" },
+  { name: "indy-ghost-light-0152", url: "https://images.squarespace-cdn.com/content/v1/57b4970fcd0f68856d4cee0a/1751941701388-EMTJY13GVN2Q933DHSIZ/Indy+Ghost+Light+-0152.jpg" },
+  { name: "indy-ghost-light-0009-2", url: "https://images.squarespace-cdn.com/content/v1/57b4970fcd0f68856d4cee0a/1751941722303-2J8E2NPF253JQOR9D4CJ/Indy+Ghost+Light+-0009-2+%281%29.jpg" },
+  { name: "indy-ghost-light-0373", url: "https://images.squarespace-cdn.com/content/v1/57b4970fcd0f68856d4cee0a/1751941650245-B5OO2JFY136G2USM8YCR/Indy+Ghost+Light+-0373.jpg" },
+  { name: "indy-ghost-light-0166-2", url: "https://images.squarespace-cdn.com/content/v1/57b4970fcd0f68856d4cee0a/1751941632431-WNI99JH8NDBLGNY8CO2R/Indy+Ghost+Light+-0166-2.jpg" },
+  { name: "indy-ghost-light-0012", url: "https://images.squarespace-cdn.com/content/v1/57b4970fcd0f68856d4cee0a/1751941694715-M8SS36RRO17Z62QHD8OY/Indy+Ghost+Light+-0012.jpg" },
+];
+console.log("Fetching bio page press photos...");
+const bioDir = path.join(IMG_DIR, "bio");
+for (const photo of BIO_GALLERY) {
+  await downloadImage(photo.url, bioDir, photo.name);
+}
+console.log(`  -> downloaded ${BIO_GALLERY.length} bio photos to ${bioDir}`);
+
 console.log("Done.");
