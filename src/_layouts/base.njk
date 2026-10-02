@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}{% if title != "Blake Beckemeyer" %} — Blake Beckemeyer{% endif %}</title>
+  <meta name="description" content="{{ description or 'Blake Beckemeyer — tenor and Power Platform & Fabric consultant.' }}">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="/">Blake Beckemeyer</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav">
+        <div class="primary-nav__group">
+          <span class="primary-nav__label">Tenor</span>
+          <a href="/bio/">Bio</a>
+          <a href="/engagements/">Engagements</a>
+          <a href="/listen/">Listen</a>
+          <a href="/resume/">Resume/CV</a>
+          <a href="/news/">News</a>
+          <a href="/audition-materials/">Audition Materials</a>
+          <a href="/partner-organizations/">Partner Organizations</a>
+        </div>
+        <div class="primary-nav__group">
+          <span class="primary-nav__label">Power Platform &amp; Fabric</span>
+          <a href="/empowering-the-platform/">Empowering the Platform</a>
+          <a href="/articles/">Articles</a>
+        </div>
+        <a href="/contact/" class="primary-nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div id="search" class="site-search"></div>
+      <div class="site-footer__links">
+        <a href="https://sphereborn.org/" target="_blank" rel="noopener">Sphere Born</a>
+        <a href="/contact/">Get in touch</a>
+      </div>
+      <p class="site-footer__copy">&copy; {{ currentYear }} Blake Beckemeyer</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/nav.js" defer></script>
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+  <script src="/pagefind/pagefind-ui.js" defer></script>
+  <script defer>
+    window.addEventListener("DOMContentLoaded", () => {
+      if (window.PagefindUI) {
+        new PagefindUI({ element: "#search", showSubResults: true });
+      }
+    });
+  </script>
+</body>
+</html>

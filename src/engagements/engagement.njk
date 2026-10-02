@@ -1,0 +1,26 @@
+---
+layout: base.njk
+pagination:
+  data: engagements
+  size: 1
+  alias: item
+permalink: "{{ item.fullUrl }}/"
+eleventyComputed:
+  title: "{{ item.title }}"
+---
+<article class="wrap page">
+  {% if item.image %}
+  <div class="item-hero__image"><img src="{{ item.image }}" alt=""></div>
+  {% endif %}
+  <h1 class="page__title">{{ item.title }}</h1>
+  <p class="item-meta">
+    <span>{{ item.startDate | formatDate }}</span>
+    {% if item.location and item.location.title %}
+      <span>{{ item.location.title }}{% if item.location.line1 %}, {{ item.location.line1 }}{% endif %}{% if item.location.line2 %}, {{ item.location.line2 }}{% endif %}</span>
+    {% endif %}
+  </p>
+  <div class="prose">
+    {{ item.bodyMarkdown | markdown | safe }}
+  </div>
+  <p><a href="/engagements/">&larr; Back to all engagements</a></p>
+</article>

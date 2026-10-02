@@ -1,0 +1,21 @@
+---
+layout: base.njk
+pagination:
+  data: news
+  size: 1
+  alias: item
+permalink: "{{ item.fullUrl }}/"
+eleventyComputed:
+  title: "{{ item.title }}"
+---
+<article class="wrap page">
+  {% if item.image %}
+  <div class="item-hero__image"><img src="{{ item.image }}" alt=""></div>
+  {% endif %}
+  <h1 class="page__title">{{ item.title }}</h1>
+  <p class="item-meta"><span>{{ item.startDate | formatDate }}</span></p>
+  <div class="prose">
+    {{ item.bodyMarkdown | markdown | safe }}
+  </div>
+  <p><a href="/news/">&larr; Back to all news</a></p>
+</article>

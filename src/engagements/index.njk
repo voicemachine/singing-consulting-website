@@ -1,0 +1,54 @@
+---
+layout: base.njk
+title: Engagements
+permalink: /engagements/
+---
+<section class="wrap page">
+  <h1 class="page__title">Engagements</h1>
+
+  <div class="section-heading">
+    <h2>Upcoming</h2>
+  </div>
+  <div class="list">
+    {% for item in engagements %}
+      {% if item.startDate | isUpcoming %}
+        <a class="card" href="{{ item.fullUrl }}/">
+          {% if item.image %}
+          <div class="card__image"><img src="{{ item.image }}" alt="" loading="lazy"></div>
+          {% else %}
+          <div class="card__image"></div>
+          {% endif %}
+          <div class="card__body">
+            <span class="card__date">{{ item.startDate | formatDate }} <span class="badge badge--upcoming">Upcoming</span></span>
+            <h3 class="card__title">{{ item.title }}</h3>
+            {% if item.location and item.location.title %}<p class="card__meta">{{ item.location.title }}</p>{% endif %}
+          </div>
+        </a>
+      {% endif %}
+    {% else %}
+      <p>No upcoming engagements posted right now — check back soon.</p>
+    {% endfor %}
+  </div>
+
+  <div class="section-heading">
+    <h2>Past Engagements</h2>
+  </div>
+  <div class="list">
+    {% for item in engagements %}
+      {% if not (item.startDate | isUpcoming) %}
+        <a class="card" href="{{ item.fullUrl }}/">
+          {% if item.image %}
+          <div class="card__image"><img src="{{ item.image }}" alt="" loading="lazy"></div>
+          {% else %}
+          <div class="card__image"></div>
+          {% endif %}
+          <div class="card__body">
+            <span class="card__date">{{ item.startDate | formatDateShort }}</span>
+            <h3 class="card__title">{{ item.title }}</h3>
+            {% if item.location and item.location.title %}<p class="card__meta">{{ item.location.title }}</p>{% endif %}
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

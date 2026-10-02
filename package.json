@@ -1,0 +1,31 @@
+{
+  "name": "singing-consulting-website",
+  "version": "1.0.0",
+  "description": "Static site for blakebeckemeyer.com, migrated off Squarespace.",
+  "main": "index.js",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "build": "eleventy --config=eleventy.config.mjs && npx pagefind --site _site --output-subdir pagefind",
+    "start": "eleventy --config=eleventy.config.mjs --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voicemachine/singing-consulting-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/voicemachine/singing-consulting-website/issues"
+  },
+  "homepage": "https://github.com/voicemachine/singing-consulting-website#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "cheerio": "^1.2.0",
+    "markdown-it": "^15.0.2",
+    "pagefind": "^1.5.2",
+    "turndown": "^7.2.4"
+  }
+}

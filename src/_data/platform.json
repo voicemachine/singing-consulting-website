@@ -1,0 +1,77 @@
+[
+  {
+    "id": "6769c6c08e787b58d4adfdf4",
+    "slug": "low-code-alm-post-deployment-actions",
+    "fullUrl": "/em-power-ing-the-platform/2025/1/5/low-code-alm-post-deployment-actions",
+    "title": "Low-Code ALM: Post-Deployment Actions",
+    "excerpt": "",
+    "bodyMarkdown": "Tired of updating Wikis with release notes? How about when you want to change ADO story statuses without pestering developers? Send out notifications to users of new features!",
+    "startDate": 1736108580493,
+    "endDate": null,
+    "location": null,
+    "tags": [],
+    "categories": [],
+    "image": "/assets/images/platform/low-code-alm-post-deployment-actions.jpg"
+  },
+  {
+    "id": "6769c62c89ed0c4c9a1be858",
+    "slug": "low-code-alm-delegated-deployments",
+    "fullUrl": "/em-power-ing-the-platform/2024/12/29/low-code-alm-delegated-deployments",
+    "title": "Low-Code ALM: Delegated Deployments",
+    "excerpt": "",
+    "bodyMarkdown": "Ever need to keep developers out of production but still need them to manage solution builds? Use delegated deployment.",
+    "startDate": 1735503600364,
+    "endDate": null,
+    "location": null,
+    "tags": [],
+    "categories": [],
+    "image": "/assets/images/platform/low-code-alm-delegated-deployments.jpg"
+  },
+  {
+    "id": "6769c282ffdb2878b4c94872",
+    "slug": "low-code-alm-gated-appovals",
+    "fullUrl": "/em-power-ing-the-platform/2024/12/23/low-code-alm-gated-appovals",
+    "title": "Low-Code ALM: Gated Appovals",
+    "excerpt": "",
+    "bodyMarkdown": "Gone are the days of QAs being surprised by code promotions. Add low-code gates using Approval connectors.",
+    "startDate": 1734985197300,
+    "endDate": null,
+    "location": null,
+    "tags": [],
+    "categories": [],
+    "image": "/assets/images/platform/low-code-alm-gated-appovals.jpg"
+  },
+  {
+    "id": "67400414a2b11b793cb5acc9",
+    "slug": "low-code-alm-power-platform-pipelines",
+    "fullUrl": "/em-power-ing-the-platform/2024/11/21/low-code-alm-power-platform-pipelines",
+    "title": "Low-Code ALM: Power Platform Pipelines",
+    "excerpt": "",
+    "bodyMarkdown": "For part 1 of this low-code governance series, I want us to consider Managed Operations that Microsoft just announced this week and give you the leg up on the basics of deploying with Power Platform Pipelines. Like many parts of Power Platform, we start from a low-code place and add pro-code extensibility, and ALM should be no different!",
+    "startDate": 1732248764560,
+    "endDate": null,
+    "location": null,
+    "tags": [],
+    "categories": [],
+    "image": "/assets/images/platform/low-code-alm-power-platform-pipelines.jpg"
+  },
+  {
+    "id": "6737894495e24d6364a38ede",
+    "slug": "fabric-amp-dataverse-connector",
+    "fullUrl": "/em-power-ing-the-platform/2024/11/15/fabric-amp-dataverse-connector",
+    "title": "Fabric and Dataverse Connector",
+    "excerpt": "",
+    "bodyMarkdown": "The Dataverse connector to Fabric is cool, but not as user-friendly as it would appear. There are some problems where you end up with the entirety of the existing data, and you are going to get something that is denormalized, causing you to have to write _more_ Python to get a table without duplicates. That’s my 2 cents!",
+    "startDate": 1731694638936,
+    "endDate": null,
+    "location": {
+      "title": "",
+      "line1": "",
+      "line2": "",
+      "country": ""
+    },
+    "tags": [],
+    "categories": [],
+    "image": "/assets/images/platform/fabric-amp-dataverse-connector.png"
+  }
+]

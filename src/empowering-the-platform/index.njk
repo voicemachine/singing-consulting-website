@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: Empowering the Platform
+permalink: /empowering-the-platform/
+---
+<section class="wrap page">
+  <h1 class="page__title">Empowering the Platform</h1>
+  <p class="page__lede">Notes on low-code Application Lifecycle Management, Power Platform, and Microsoft Fabric.</p>
+  <div class="list">
+    {% for item in platform %}
+      <a class="card" href="{{ item.fullUrl }}/">
+        {% if item.image %}
+        <div class="card__image"><img src="{{ item.image }}" alt="" loading="lazy"></div>
+        {% else %}
+        <div class="card__image"></div>
+        {% endif %}
+        <div class="card__body">
+          <span class="card__date">{{ item.startDate | formatDateShort }}</span>
+          <h3 class="card__title">{{ item.title }}</h3>
+          {% if item.excerpt %}<p class="card__meta">{{ item.excerpt }}</p>{% endif %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
